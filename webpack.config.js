@@ -12,20 +12,19 @@ let config =  {
         extensions: ['.js', '.ts', '.tsx']
     },
     devServer: {
-        noInfo: true
+        client: {
+            overlay: false
+        }
     },
     module: {
         rules: [
             {
                 test: /\.tsx?/,
-                loader: 'tslint-loader',
-                enforce: 'pre',
-                exclude: [/node_modules/]
-            },
-            {
-                test: /\.tsx?/,
                 loader: 'ts-loader',
-                exclude: [/node_modules/]
+                exclude: [/node_modules/],
+                options: {
+                    transpileOnly: true
+                }
             }
         ]
     },
