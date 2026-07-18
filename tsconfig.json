@@ -3,14 +3,15 @@
         "src/main.tsx"
     ],
     "compilerOptions": {
-        "target": "es5",
+        "target": "es2015",
         "module": "es2015",
         "moduleResolution": "node",
         "sourceMap": true,
         "strict": true,
         "allowJs": true,
-        "jsx": "react",
-        "skipLibCheck": true
+        "jsx": "react-jsx",
+        "skipLibCheck": true,
+        "esModuleInterop": true
     },
     "exclude": ["node_modules"]
 }
